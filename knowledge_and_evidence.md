@@ -1,4 +1,4 @@
-<img width="697" height="732" alt="image" src="https://github.com/user-attachments/assets/9d2cb3b7-5192-4b35-9e53-3ec0e1dfa72a" /># Evidence and Knowledge
+# Evidence and Knowledge
 
 This document includes instructions and knowledge questions that must be completed to receive a *Competent* grade on this portfolio task.
 
@@ -171,7 +171,7 @@ Compare and contrast the classes Happy and Sad.
 
 1. What is the key difference between the two classes?
    > Sad does not include the ability to blink. Because of this it does not need to import time and Blinkable
-   > The mouth LEDS are different Happy: [41, 46, 50, 51, 52, 53], Sad :[49, 54, 42, 43, 44, 45]
+   > 
    
 2. What are the key similarities?
    > Both call the __init__ function from Smiley & both use the show function from Smiley
@@ -180,23 +180,26 @@ Compare and contrast the classes Happy and Sad.
    > Both draw eyes
    
 3. What difference stands out the most to you and why?
-   > The code for the eyes is different, If the eyes are open then 
+   > The code for the eyes is different, refer to code:  
  ![Example Running Code](screenshots/Screenshot_Happy.png)
+   > ![Example Running Code](screenshots/Screenshot_SAD.png)
 4. How does this difference affect the functionality of these classes
-   > The code in the Happy class was incorrect  Your answer here
-   >
-
+   > The code in the Happy class (using Python's ternary conditional expression) opens the eyes afterwards
+   > The code in the SAD class keeps the eyes closed.
+   
 ### 2.6. Where is the Sense(Hat) in the code?
 
 1. Which class(es) utilize the functionality of the SenseHat?
-   > Your answer here
-   >
+   > Smiley uses the functionality of the SenSense
+   > Sad and Happy use the functionality of the SenSense through Smiley
+   
 2. Which of these classes directly interact with the SenseHat functionalities?
-   > Your answer here
-   >
+   > smiley
+   
 3. Discuss the hiding of the SenseHAT in terms of encapsulation (100-200 Words)
-   > Your answer here
-   >
+   > Encapsulation is the hiding the detailed operation of something in somthing else. In this case the 
+   > SenseHat is encapsulated in Smiley and we call Smiley for Happy and Sad and don't need to repeat the code in Happy and Sad. 
+   > Complexity of SenseHat is hidden in Smiley.
 
 ### 2.7. Sad Smileys Can’t Blink (Or Can They?)
 
@@ -206,22 +209,24 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 
 1. Does the code's author believe that every `Smiley` should be able to blink? Explain.
 
-> Your answer here
+> No, becuase they do not include the code that sits in Happy
 >
 
 2. For those smileys that blink, does the author expect them to blink in the same way? Explain.
 
-> Your answer here
+> No, this sis customsiabel for the classes that call smiley.
+> The blank can change by using thing s like changes in colour.
+>  ![Example Running Code](screenshots/Screenshot_Happy.png)
 >
 
 3. Referring to the implementation of blink in the Happy and Sad Smiley classes, give a brief explanation of what polymorphism is.
 
-> Your answer here
->
+> Polymorphism is a conceopt in programming where different classes cna be treated as objects of a common superclass. 
+> The same method can apply differently based on the object that is calling it.
 
 4. How is inheritance used in the blink method, and why is it important for polymorphism?
 
-> Your answer here
+> Inheritance is the concept of taking on a behaviour from a parent class. It is important with reference to polymorphism because some behaviours but not all behaviours are inhereted.
 >
 1. **Implement Blink in Sad Class:**
 
@@ -233,14 +238,16 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
    ```
 
 2. **Code Implementation:** Implement the code that allows the Sad smiley to blink. Use the implementation from the Happy Smiley as a reference. Ensure your new method functions similarly by controlling the blink duration through the `delay` argument.
+3. ![Sad Smiley Blinking](screenshots/SAD_blinking.png)
 
-3. **Testing the Implementation:**
+4. **Testing the Implementation:**
 
 - Test the new blink functionality on your Raspberry Pi or within the Python classes provided. You might need to adjust the `main.py` script to incorporate Sad Smiley's new blinking capability.
 
 Include a screenshot of the sad smiley or the modified `main.py`:
 
 ![Sad Smiley Blinking](screenshots/SAD_blinking.png)
+
 
 - Observe and document the Sad smiley as it blinks its eyes. Describe any adjustments or issues encountered during implementation.
 
