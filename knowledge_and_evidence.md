@@ -18,7 +18,7 @@ This document includes instructions and knowledge questions that must be complet
 - When requested to upload evidence, upload all screenshots to `screenshots/` and embed them in this document. For example:
 
 ```markdown
-![Example Running Code](screenshots/Screenshot_SAD.png)
+![Example Running Code](screenshots/Putfilename here)
 ```
 
 ![Sample](screenshots/sample.png)
@@ -170,16 +170,20 @@ python3 main.py
 Compare and contrast the classes Happy and Sad.
 
 1. What is the key difference between the two classes?
-   > Your answer here
-   >
+   > Sad does not include the ability to blink. Because of this it does not need to import time and Blinkable
+   > The mouth LEDS are different Happy: [41, 46, 50, 51, 52, 53], Sad :[49, 54, 42, 43, 44, 45]
+   
 2. What are the key similarities?
-   > Your answer here
-   >
+   > Both call the __init__ function from Smiley & both use the show function from Smiley
+   > Both can call the dim_display function
+   > Both draw a mouth
+   > Both draw eyes
+   
 3. What difference stands out the most to you and why?
-   > Your answer here
-   >
+   > The code for the eyes is different, If the eyes are open then 
+ ![Example Running Code](screenshots/Screenshot_Happy.png)
 4. How does this difference affect the functionality of these classes
-   > Your answer here
+   > The code in the Happy class was incorrect  Your answer here
    >
 
 ### 2.6. Where is the Sense(Hat) in the code?
