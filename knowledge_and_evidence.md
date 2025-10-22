@@ -1,4 +1,4 @@
-# Evidence and Knowledge
+<img width="697" height="732" alt="image" src="https://github.com/user-attachments/assets/9d2cb3b7-5192-4b35-9e53-3ec0e1dfa72a" /># Evidence and Knowledge
 
 This document includes instructions and knowledge questions that must be completed to receive a *Competent* grade on this portfolio task.
 
@@ -101,36 +101,44 @@ python3 main.py
 
 5. Examining `smiley.py`, provide an example of a class variable and an instance variable (attribute). Explain **why** one is defined as a class variable and the other as an instance variable.
 
-> Your answer here
->
+> WHITE - variable is Shared by all instances of the class
+> Y - Unique to each instance(object) of the class
 
 6. Examine `happy.py`, and identify the constructor (initializer) for the `Happy` class:
    1. What is the purpose of a constructor (in general) and this one (in particular)?
 
-   > Your answer here
-   >
+   > the constructor (__init__) is a special method called when a new oject if a class is setup. 
+   > It sets up the  object by setting initial values for instance variables of steps.
+   > In this instance it Renders a mouth and eyes by blanking the pixels that form that object.
+   > mouth [41, 46, 50, 51, 52, 53]
+   > eyes [10, 13, 18, 21]
+   > This encapulates the setup logic inside the class so usesrrs Create a HAPPY and get ready to use it
 
    2. What statement(s) does it execute (consider the `super` call), and what is the result?
 
-   > Your answer here
-   >
+   > super.__init__() - as senseHat objct is created and assigned to sense_hat. Turns on all LED's with the following LEd off [0,7,56,64]
+   > self.draw_mouth - Renders a mouth by blanking the pixels that form that object.  Turns of LED [41, 46, 50, 51, 52, 53]
+   > self.draw_eyes - Draws the eyes (open by default) on the standard smiley. turns of LED's [10,13,18,21)
+
+
 
 ### 2.3. Code style
 
 1. What code style is used in the code? Is it likely to be the same as the code style used in the SenseHat? Give to reasons as to why/why not:
 
-> Your answer here
->
+> Python - PEP8 
+> The  SensHat is primarly written in Python however it uses a series of libraries  like the RTIMULib which are written in C/C++
 
 2. List three aspects of this convention you see applied in the code.
 
-> Your answer here
->
+> variables names written with underscores
+> Function and varibale names written in full
+> Commented code to enable description of the purpose of the code sections
 
 3. Give two examples of organizational documentation in the code.
 
-> Your answer here
->
+> """Renders a mouth by blanking the pixels that form that object."""
+>""" Draws the eyes (open or closed) on the standard smiley. :param wide_open (bool): eyes open or closed."""
 
 ### 2.4. Identifying and understanding classes
 
