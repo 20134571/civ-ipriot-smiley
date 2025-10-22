@@ -28,14 +28,27 @@ class Happy(Smiley, Blinkable):
         """
         eyes = [10, 13, 18, 21]
         for pixel in eyes:
-            self.pixels[pixel] = self.BLANK if wide_open else self.YELLOW
+            #self.pixels[pixel] = self.BLANK if wide_open else self.YELLOW
+            if wide_open:
+               eyes = self.BLANK
+            else:
+               #eyes = self.YELLOW
+               eyes = self.RED
+            self.pixels[pixel] = eyes
+            
 
-    def blink(self, delay=0.25):
+    def blink(self, delay=2.0):
         """
        Blinks the smiley's eyes once
         
         :param delay: Delay between blinks (in seconds)
         """
+        self.draw_eyes(wide_open=False)
+        self.show()
+        time.sleep(delay)
+        self.draw_eyes(wide_open=True)
+        self.show()
+        time.sleep(delay)
         self.draw_eyes(wide_open=False)
         self.show()
         time.sleep(delay)

@@ -10,7 +10,7 @@ import time
 import tkinter as tk
 
 DEFAULT_RGB = [(255, 255, 255)] * 64
-
+DEFAULT_RGB = [(0, 0, 255)] * 64
 
 logging.basicConfig(format="%(asctime)s.%(msecs)03d [%(levelname)s] %(name)s (%(filename)s:%(lineno)d): %(message)s",
                     level=logging.INFO,
