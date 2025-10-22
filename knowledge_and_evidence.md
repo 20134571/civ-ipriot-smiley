@@ -120,8 +120,6 @@ python3 main.py
    > self.draw_mouth - Renders a mouth by blanking the pixels that form that object.  Turns of LED [41, 46, 50, 51, 52, 53]
    > self.draw_eyes - Draws the eyes (open by default) on the standard smiley. turns of LED's [10,13,18,21)
 
-
-
 ### 2.3. Code style
 
 1. What code style is used in the code? Is it likely to be the same as the code style used in the SenseHat? Give to reasons as to why/why not:
@@ -137,8 +135,8 @@ python3 main.py
 
 3. Give two examples of organizational documentation in the code.
 
-> """Renders a mouth by blanking the pixels that form that object."""
->""" Draws the eyes (open or closed) on the standard smiley. :param wide_open (bool): eyes open or closed."""
+> Method docstring: """Renders a mouth by blanking the pixels that form that object.""" 
+> Method docstring: """ Draws the eyes (open or closed) on the standard smiley. :param wide_open (bool): eyes open or closed."""
 
 ### 2.4. Identifying and understanding classes
 
@@ -150,8 +148,12 @@ python3 main.py
 
 | Class Name | Super or Sub? | Direct parent(s) |
 | ---------- | ------------- | ---------------- |
-| NotReal    | Sub           | NotRealParent    |
-|   ...      |   ...         |      ...         |
+| Smiley     | base          | no parent
+| Sad        | Sub           | Smiley and Blinkable    |
+| Happy      | Sub           | Smiley and Blinkable   | 
+| Blinkable  | base          | no parent        | 
+| SenseHat   | base          | no parent
+
 
 2. Explain the concept of abstraction, giving an example from the project (note "implementing an ABC" is **not** in itself an example of abstraction). (Max 150 words)
 
