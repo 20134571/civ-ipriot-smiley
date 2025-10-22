@@ -18,7 +18,7 @@ This document includes instructions and knowledge questions that must be complet
 - When requested to upload evidence, upload all screenshots to `screenshots/` and embed them in this document. For example:
 
 ```markdown
-![Example Running Code](screenshots/screenshot1.png)
+![Example Running Code](screenshots/Screenshot_SAD.png)
 ```
 
 ![Sample](screenshots/sample.png)
@@ -236,7 +236,7 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 
 Include a screenshot of the sad smiley or the modified `main.py`:
 
-![Sad Smiley Blinking](screenshots/sad_blinking.png)
+![Sad Smiley Blinking](screenshots/SAD_blinking.png)
 
 - Observe and document the Sad smiley as it blinks its eyes. Describe any adjustments or issues encountered during implementation.
 
