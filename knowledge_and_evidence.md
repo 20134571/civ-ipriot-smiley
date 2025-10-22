@@ -217,7 +217,7 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 > No, this sis customsiabel for the classes that call smiley.
 > The blank can change by using thing s like changes in colour.
 >  ![Example Running Code](screenshots/Screenshot_Happy.png)
->
+> ![Example Running Code](screenshots/Screenshot_SAD_main.png)
 
 3. Referring to the implementation of blink in the Happy and Sad Smiley classes, give a brief explanation of what polymorphism is.
 
@@ -226,8 +226,9 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 
 4. How is inheritance used in the blink method, and why is it important for polymorphism?
 
-> Inheritance is the concept of taking on a behaviour from a parent class. It is important with reference to polymorphism because some behaviours but not all behaviours are inhereted.
->
+> Inheritance is the concept of taking on a behaviour from a parent class. It is important with reference to polymorphism because some behaviours can be overwritten in the sub class.
+> This allows methods like Blink to behave differently in the subclass.
+
 1. **Implement Blink in Sad Class:**
 
    - Create a new method called `blink` within the Sad class. Ensure you use the same method signature as in the Happy class:
@@ -251,7 +252,9 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
 - Observe and document the Sad smiley as it blinks its eyes. Describe any adjustments or issues encountered during implementation.
 
-  > Your answer here
+  > I was able to change the color of the eye lid during the blink by changing the colour of the else statement in the code above
+  > When we turnd of blink (which we copied in above), the code left the eyes shut and did not open again.
+  
 
   ### 2.8. If It Walks Like a Duck…
 
@@ -259,20 +262,21 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
   1. **Class Type Analysis:** What kind of class is `Blinkable`? Inspect its superclass for clues about its classification.
 
-     > Your answer here
+     > Blinkable is suppposed to be an abstract class. I.e. anything that inherits Blinkable, can blink
 
   2. **Class Implementation:** `Blinkable` is a class intended to be implemented by other classes. What generic term describes this kind of class, which is designed for implementation by others? **Clue**: Notice the lack of any concrete implementation and the naming convention.
 
-  > Your answer here
+  > an abstract class. I.e. anything that inherits Blinkable, can blink
 
   3. **OO Principle Identification:** Regarding your answer to question (2), which Object-Oriented (OO) principle does this represent? Choose from the following and justify your answer in 1-2 sentences: Abstraction, Polymorphism, Inheritance, Encapsulation.
 
-  > Your answer here
+  > Abstraction and Polymorphism ( explain further), there are also other answers.
 
   4. **Implementation Flexibility:** Explain why you could grant the Sad Smiley a blinking feature similar to the Happy Smiley's implementation, even without directly using `Blinkable`.
 
-  > Your answer here
-
+  > You can code this into Sad so that Sad beahviour is different from blinkable. i.e. two blinks instead of one.
+  ![Sad Smiley Blinking](screenshots/Screenshot_SAD_Doubleblink.png)
+  
   5. **Concept and Language Specificity:** In relation to your response to question (4), what is this capability known as, and why is it feasible in Python and many other dynamically typed languages but not in most statically typed programming languages like C#? **Clue** This concept is hinted at in the title of this section.
 
   > Your answer here
