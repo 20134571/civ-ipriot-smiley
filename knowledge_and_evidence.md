@@ -54,7 +54,7 @@ Address the following tasks and questions based on the code provided in this rep
 4. Evidence this by providing screenshots of the project directory structure and the output of the `main.py` file
 
 ![Local Execution (INSERT YOUR SCREENSHOT)](screenshots/Screenshot_2025-10-22_step_1.png)
-
+![Local Execution (INSERT YOUR SCREENSHOT)](screenshots/screenshots/Screenshot_Main.py_Output.jpg)
 If you are running on a Raspberry Pi, you can use the following command to run the project and then screenshot the result:
 
 ```bash
