@@ -377,12 +377,20 @@ Include a screenshot of the sad smiley or the modified `main.py`:
   Changing the color of the smileys once is straightforward, but it isn't very flexible. To facilitate various colors for smileys, it is advisable not to hardcode values in any class. This approach was identified earlier as a necessary change. Let's start by removing the built-in assumptions about color in our classes.
 
   1. **Add a method called `complexion` to the `Smiley` class:** Implement this instance method to return `self.YELLOW`. Using the term "complexion" instead of "color" provides a more abstract terminology that focuses on the meaning rather than implementation.
+> ![Smiley Complexion change](screenshots/Screenshot__Smiley_Complexion.png)
 
-  2. **Refactor subclasses to use the `complexion` method:** Modify any subclass that directly accesses the color variable to instead utilize the new `complexion` method. This ensures that color handling is centralized and can be easily modified in the future.
+  3. **Refactor subclasses to use the `complexion` method:** Modify any subclass that directly accesses the color variable to instead utilize the new `complexion` method. This ensures that color handling is centralized and can be easily modified in the future.
+> ![Happy Complexion Change](screenshots/Screenshot_Happy_Complexion.png)
+> ![Sad Complexion Change](screenshots/Screenshot_SAD_Complexion.png)
 
-  3. **Determine the applicable Object-Oriented principle:** Consider whether Abstraction, Polymorphism, Inheritance, or Encapsulation best applies to the modifications made in this step.
-
-  4. **Verify the implementation:** Ensure that the modifications function as expected. The smileys should still display in yellow, confirming that the new method correctly replaces the direct color references.
+  5. **Determine the applicable Object-Oriented principle:** Consider whether Abstraction, Polymorphism, Inheritance, or Encapsulation best applies to the modifications made in this step.
+  > By adding a default_complexion and allowing Happy and Sad to overwrite this, we display inheritance through abstraction. 
+  > Abstraction: Users of Sad and Happy can call complexion() without knowing whether the color comes from a class variable, instance variable, or other logic.
+  > Inheritance: as we create a new class based on an exitsing class and reuse behaviour.
+  
+  6. **Verify the implementation:** Ensure that the modifications function as expected. The smileys should still display in yellow, confirming that the new method correctly replaces the direct color references.
+> ![Happy Complexion Main](screenshots/Screenshot_Main_Happ.png)
+> ![Sad Complexion Main](screenshots/Screenshot_Main_Sad.png)
 
   This step is crucial for setting up a more flexible system for color management in the smiley display logic, allowing for easy adjustments and extensions in the future.
 
@@ -398,11 +406,18 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
   4. **Bulk rename:** We want to update our grid to use the value of complexion, but we have so many `Y`'s in the grid. Use your IDE's refactoring tool to rename all instances of the **symbol** `Y` to `X`. Where `X` is the value of the `complexion` variable. Include a screenshot evidencing you have found the correct refactor tool and the changes made.
 
-  ![Bulk Rename](screenshots/bulk_rename.png)
-
+  > ![Bulk Rename](screenshots/Screenshot_smiley_Refactored.png)
+  
+> No refactor tool available in Spyder so used Visual Studio F2 function
+> 
   5. **Update the `complexion` method:** Adjust this method to return `self.my_complexion`, ensuring that whatever color is assigned during instantiation is what the smiley displays.
+> ![Default_Complexion Sad](screenshots/Screenshot_sad_Default_Complexion.png) ![Default_Complexion Sad](screenshots/Screenshot_Main_Sad_Default_Complexion.png)
+  
+> ![Default_Complexion Happy](screenshots/Screenshot_Happy_Default_Complexion.png) ![Default_Complexion Happy](screenshots/Screenshot_Main_Happy_Default_Complexion.png)
 
-  6. **Verification:** Run the updated code to confirm that Smileys still defaults to yellow unless specified otherwise.
+
+  7. **Verification:** Run the updated code to confirm that Smileys still defaults to yellow unless specified otherwise.
+
 
   ### 3.4. Flexible Colors – Step 3
 
@@ -413,11 +428,20 @@ Include a screenshot of the sad smiley or the modified `main.py`:
      ```python
      super().__init__(complexion=self.BLUE)
      ```
+> ![Default_Complexion Sad](screenshots/Screenshot_Sad_Default_Complexion.png)
 
   2. **Test color functionality for the Sad smiley:** Execute the program to verify that the Sad smiley now appears blue.
+> ![Sad_Blue](screenshots/Screenshot_Sad_Blue.png)
 
-  3. **Ensure the Happy smiley remains yellow:** Confirm that changes to the Sad smiley do not affect the default color of the Happy smiley, which should still display in yellow.
+  4. **Ensure the Happy smiley remains yellow:** Confirm that changes to the Sad smiley do not affect the default color of the Happy smiley, which should still display in yellow.
+  confirmed
+> ![Happy_Yellow](screenshots/Screenshot_Happy_Yellow.png)
 
-  4. **Design and Implement An Angry Smiley:** Create an Angry smiley class that inherits from the `Smiley` class. Set the color of the Angry smiley to red by passing `self.RED` as the `complexion` argument in the superclass call.
+  5. **Design and Implement An Angry Smiley:** Create an Angry smiley class that inherits from the `Smiley` class. Set the color of the Angry smiley to red by passing `self.RED` as the `complexion` argument in the superclass call.
+
+> ANGRY CODE  
+> ![Angry Code](screenshots/Screenshot_%20Angry_code.png)
+>
+> ![AngryDisplay](screenshots/Screenshoot_Angry.png)
 
   ***
