@@ -7,10 +7,9 @@ class Happy(Smiley, Blinkable):
     """
    Provides a Smiley with a happy expression
     """
-    DEFAULT_COMPLEXION=Smiley.YELLOW #Overrides at class level
-    
+       
     def __init__(self):
-        super().__init__(complexion=self.DEFAULT_COMPLEXION)
+        super().__init__(complexion=self.YELLOW)
 
         self.draw_mouth()
         self.draw_eyes()
@@ -34,7 +33,7 @@ class Happy(Smiley, Blinkable):
             if wide_open:
                eyes = self.BLANK
             else:               
-               eyes = self.DEFAULT_COMPLEXION
+               eyes = self.my_complexion
             self.pixels[pixel] = eyes
             
 

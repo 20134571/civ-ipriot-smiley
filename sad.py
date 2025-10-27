@@ -5,11 +5,10 @@ from smiley import Smiley
 
 class Sad(Smiley):
     
-    DEFAULT_COMPLEXION=Smiley.BLUE
             
     def __init__(self):
         
-        super().__init__(complexion=self.DEFAULT_COMPLEXION)
+        super().__init__(complexion=self.BLUE)
         
         self.draw_mouth()
         self.draw_eyes()
@@ -32,7 +31,7 @@ class Sad(Smiley):
             if wide_open:
                 eyes = self.BLANK        
             else:
-                eyes = self.DEFAULT_COMPLEXION
+                eyes = self.complexion 
              
             self.pixels[pixel] = eyes
             
