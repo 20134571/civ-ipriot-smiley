@@ -14,7 +14,7 @@ from smiley import Smiley
 
 class Angry(Smiley, Blinkable):
     """
-   Provides a Smiley with a happy expression
+   Provides a Smiley with a Angry expression
     """
     DEFAULT_COMPLEXION=Smiley.RED #Overrides at class level
     
