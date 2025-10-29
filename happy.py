@@ -7,9 +7,11 @@ class Happy(Smiley, Blinkable):
     """
    Provides a Smiley with a happy expression
     """
-       
+    
+    DEFAULT_COMPLEXION=Smiley.YELLOW
+    
     def __init__(self):
-        super().__init__(complexion=self.YELLOW)
+        super().__init__(complexion=self.DEFAULT_COMPLEXION)
 
         self.draw_mouth()
         self.draw_eyes()
