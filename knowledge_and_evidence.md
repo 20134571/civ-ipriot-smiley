@@ -319,7 +319,7 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
   4. **Implementation Flexibility:** Explain why you could grant the Sad Smiley a blinking feature similar to the Happy Smiley's implementation, even without directly using `Blinkable`.
 
-  > The blink() method os a sequence of steps by: drawing eyes closed, displaying it, waiting, drawings eyes open, displaying again.
+  > The blink() method is a sequence of steps by: drawing eyes closed, displaying it, waiting, drawings eyes open, displaying again.
   > We have inherited the ability to blink through Smiley which inherits from SenseHat. We just need to import time to enable the code to blink.
   > You can code this into sad so that Sad behaviour is different from Happy in happy. i.e. two blinks instead of one.
   ![Happy Smiley Blinking](screenshots/Screenshot_happy_double_blink.png)
@@ -327,7 +327,18 @@ Include a screenshot of the sad smiley or the modified `main.py`:
   
   5. **Concept and Language Specificity:** In relation to your response to question (4), what is this capability known as, and why is it feasible in Python and many other dynamically typed languages but not in most statically typed programming languages like C#? **Clue** This concept is hinted at in the title of this section.
 
-  > Your answer here
+  > parametric Polymorphism. Which is where the function works on any object that supplies the needed behaviour. 
+  In the case of Python, it uses structural typing ( or duck typing) where compliance is determined by presence of method.
+  Python, being a dynamically typed programming method type checks at runtime. It does not verify beforehand that : a type implements an interface, a class declares a method or a function receives a certain type. As long as the object at runtime has the required attribute/method everything works. This is structural polymorphism via ducktyping. 
+
+  Structural Polymorphism does not require inheritance, but it does not forbid it. So the required behaviour can come from an abstract class through inheritance or through the class itself( the method does do matter as long as the object provides the expected methods). In this case Structural typing accepts the behaviour because the class has the method. Alternately, the class itself can have the behaviour(no inheritance, no interface).
+
+  For a Static language like C#, structure and declaration checking occurs at compile time. 
+  C# needs to know at compile time: What the type of object is, wether that type has a method .eg Blink(), wether it implements some interface like Iblinkable. (Note. I have no exposure to C# programming yet)
+
+  i,e
+  Python: "Does it have a blink() method? Good enough."
+  C# : "Does the type declare Iblinkable? If not, error." (note. I had to understand interface declarations)
 
   ***
 
