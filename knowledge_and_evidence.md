@@ -329,7 +329,19 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
   > Your answer here
 
-  ***
+  parametric Polymorphism. Which is where the function works on any object that supplies the needed behaviour. 
+  In the case of Python, it uses structural typing ( or duck typing) where compliance is determined by presence of method.
+  Python, being a dynamically typed programming method type checks at runtime. It does not verify beforehand that : a type implements an interface, a class declares a method or a function receives a certain type. As long as the object at runtime has the required attribute/method everything works. This is structural polymorphism via ducktyping. 
+
+  Structural Polymorphism does not require inheritance, but it does not forbid it. So the required behaviour can come from an abstract class through inheritance or through the class itself( the method does do matter as long as the object provides the expected methods). In this case Structural typing accepts the behaviour because the class has the method. Alternately, the class itself can have the behaviour(no inheritance, no interface).
+
+  For a Static language like C#, structure and declaration checking occurs at compile time. 
+  C# needs to know at compile time: What the type of object is, wether that type has a method .eg Blink(), wether it implements some interface like Iblinkable. (Note. I have no exposure to C# programming yet)
+
+  i,e
+  Python: "Does it have a blink() method? Good enough."
+  C# : "Does the type declare Iblinkable? If not, error." (note. I had to understand interface declarations)
+
 
   ## 3. Refactoring
 
